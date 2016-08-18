@@ -1,28 +1,36 @@
-﻿<!-- View For Artist List-->
+﻿<!--
+Name: Sam Parathuvayalil Sunny
+Student ID: 200300762
+Desc: View For Artist List
+-->
 @model IEnumerable<COMP2006_S2016_FinalExamV2.Models.Artist>
 
 @{
     ViewBag.Title = "Index";
 }
+<div class="panel panel-default" style="margin:20px;">
+    <div class="panel panel-body" style="background-color:whitesmoke">
+        <h2>Index</h2>
 
-<h2>Index</h2>
 
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        
-    </tr>
+            </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        
-    </tr>
-}
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
 
-</table>
+                </tr>
+            }
+
+        </table>
+        </div>
+</div>

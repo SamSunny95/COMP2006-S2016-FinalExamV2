@@ -1,35 +1,43 @@
-﻿<!-- View For Genre List-->
+﻿<!--
+Name: Sam Parathuvayalil Sunny
+Student ID: 200300762
+Desc: View For Genre List
+-->
 
 @model IEnumerable<COMP2006_S2016_FinalExamV2.Models.Genre>
 
 @{
     ViewBag.Title = "Index";
 }
+<div class="panel panel-default" style="margin:20px;">
+    <div class="panel panel-body" style="background-color:whitesmoke">
+        <h2>Index</h2>
 
-<h2>Index</h2>
 
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        
-    </tr>
+            </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        
-    </tr>
-}
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
 
-</table>
+                </tr>
+            }
+
+        </table>
+        </div>
+</div>
